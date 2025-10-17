@@ -3,11 +3,14 @@ const app = express()
 import mongoose from "mongoose"
 import Country  from "./models/Country.js"
 import cors from "cors"
+import dotenv from "dotenv"
 
 app.use(express.json())
 app.use(cors())
+dotenv.config();
 
-const uri = "mongo url"
+const uri = process.env.MONGO_URI;
+
 mongoose.connect(uri)
     .then(()=> {
         console.log("Server is running on port 5000");
@@ -29,6 +32,7 @@ app.get("/api/teams",  (req,res)=> {
         })
 })
 
+
 app.get("/api/teams/:TeamId", (req,res)=> {
     const TeamId = req.params.TeamId.trim()
     Country.findById(TeamId)
@@ -42,52 +46,3 @@ app.get("/api/teams/:TeamId", (req,res)=> {
 
 
 
-
-
-app.get('/api/positions/strikers', (req,res)=> {
-    Country.find({"players.position": "Forward" })
-    .then((result) => {
-        res.json(result)
-    })
-    .catch((err)=> {
-        console.log(err)
-    })
-    
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-app.get("/api/teams/:TeamId/:PlayerId", (req, res)=> {
-    const TeamId = req.params.TeamId.trim()
-    const PlayerId = req.params.PlayerId.trim()
-    Country.findById(TeamId)
-        .then((result)=> {
-            //issue matching id
-            res.json(player)
-        })
-        .catch((err)=> {
-            console.log(err)
-        })
-})
