@@ -19,7 +19,7 @@ export default function HomePage() {
                 backgroundRepeat: 'no-repeat',
                 backgroundAttachment: 'fixed',
                 }}
-            >
+            >   
                 < Intro />
             </div>
             
