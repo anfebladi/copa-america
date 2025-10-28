@@ -1,4 +1,8 @@
 
+
+//regenerate api keys
+// fix data
+// add popper for sign in
 import { initializeApp } from "firebase/app";
 import { getAuth , GoogleAuthProvider} from "firebase/auth";
 
