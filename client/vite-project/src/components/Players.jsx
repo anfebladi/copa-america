@@ -47,10 +47,17 @@ export default function Players() {
                         {countries.players.filter(player => search === '' || player.name.toLowerCase().includes(search.toLowerCase())).map( player => (
                             <div className="col-3 ms-5 me-5 bg-white mt-5 mb-5  rounded hover-zoom">
                                 <div className="bg-info m-3">
-                                    <p className="text-dark text-center fs-1 fw-bold mb-4"> {player.name} </p>
+                                    <p className="text-dark text-center fs-2 fw-bold mb-4"> {player.name} </p>
                                     
                                     <p className="text-dark text-center fs-3 fw-bold"> Position:</p>
-                                    <p className="text-dark text-center fs-1 fw-bold mb-3">{player.position}</p>
+                                    <p className="text-dark text-center fs-2 fw-bold mb-3">{player.position}</p>
+
+                                    <p className="text-dark text-center fs-3 fw-bold"> Goals:</p>
+                                    <p className="text-dark text-center fs-2 fw-bold mb-3">{player.goals}</p>
+
+                                    <p className="text-dark text-center fs-3 fw-bold"> Assists:</p>
+                                    <p className="text-dark text-center fs-2 fw-bold mb-3">{player.assist}</p>
+
                                     
                                 </div>
                             </div>
