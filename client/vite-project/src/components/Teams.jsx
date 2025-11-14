@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useEffect, useState} from "react"
 import { Link } from "react-router-dom"
-import  './teams.css';
+import  './Teams.css';
 
 
 export default function Teams() {
