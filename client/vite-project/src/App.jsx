@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage.jsx"
 import NotFoundPage from "./pages/NotFoundPage.jsx"
 import PlayersPage from "./pages/PlayersPage.jsx"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./config/firebase.js";
 import { useState , useEffect } from "react"
