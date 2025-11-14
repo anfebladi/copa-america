@@ -13,7 +13,7 @@ export default function Players() {
 
     useEffect(()=> {
         setLoading(true)
-        axios.get(`/api/teams/${id}`)
+        axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/teams/${id}`)
             .then((result)=> {
                 setCountries(result.data)
                 setLoading(false)

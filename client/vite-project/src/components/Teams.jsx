@@ -14,7 +14,7 @@ export default function Teams() {
 
     useEffect(()=> {
         setLoading(true)
-        axios.get("/api/teams")
+        axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/teams`)
             .then((result)=> {
                 setCountries(result.data)
                 setLoading(false)
