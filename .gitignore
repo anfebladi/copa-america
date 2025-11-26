@@ -2,3 +2,6 @@ server/node_modules/
 client/vite-project/node_modules/
 server/.env
 client/vite-project/.env
+
+.github/instructions/kluster-code-verify.instructions.md
+.kluster
